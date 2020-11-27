@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class PsLoginApp {
-    private static final String AUTH_QUERY="SELECT COUNT(*)  FROM USERINFO WHERE UNAME=? AND PWD=?";
+    private static final String AUTH_QUERY="SELECT COUNT(*)  FROM USER_INFO WHERE UNAME=? AND PASS=?";
 	public static void main(String[] args) {
 		Scanner sc=null;
 		String user=null;
@@ -47,9 +47,9 @@ public class PsLoginApp {
 			   }
 			   //process the Result
 			   if(count==0)
-				    System.out.println("Invalid Credentials");
+				    System.out.println("Invalid Credentials...");
 			   else
-				   System.out.println("Valid Credentials");
+				   System.out.println("Valid Credentials....");
 		
 		}//try
 		catch(SQLException se) {
