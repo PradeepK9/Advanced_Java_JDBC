@@ -61,7 +61,7 @@ public class PsInsertTestAutoSnoOracle {
 			else if(se.getErrorCode()>=900 && se.getErrorCode()<=999) 
 				System.out.println(" SQL Query Syntax problem");
 			else
-				System.out.println("unknow jdbc problem");
+				System.out.println("Unknow jdbc problem");
 			
 			se.printStackTrace();
 			
