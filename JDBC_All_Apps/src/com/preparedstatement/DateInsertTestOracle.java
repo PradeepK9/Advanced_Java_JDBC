@@ -75,7 +75,7 @@ public class DateInsertTestOracle {
 			   if(count==0)
 				    System.out.println("Record not inserted");
 			   else
-				   System.out.println("record inserted");
+				   System.out.println("record inserted successfully");
 		}//try
 		catch(SQLException se) {
 			se.printStackTrace();
