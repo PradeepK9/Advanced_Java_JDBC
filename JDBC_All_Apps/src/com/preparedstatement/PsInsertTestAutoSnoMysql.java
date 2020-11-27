@@ -34,7 +34,7 @@ public class PsInsertTestAutoSnoMysql {
 			//Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			//establish the connection
-			con=DriverManager.getConnection("jdbc:mysql:///NTAJ414DB","root","root");
+			con=DriverManager.getConnection("jdbc:mysql:///myadvjava","root","system");
 			//create Statement object
 			if(con!=null)
 			    ps=con.prepareStatement(INSERT_STUD_QUERY);
