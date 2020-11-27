@@ -22,7 +22,6 @@ public class PsInsertTestAutoSnoRandomNumber {
 			//read inputs
 			sc=new Scanner(System.in);
 			if(sc!=null) {
-				
 				System.out.println("Enter student name::");
 				name=sc.next(); //gives ramesh
 				System.out.println("Enter student address::");
@@ -35,7 +34,7 @@ public class PsInsertTestAutoSnoRandomNumber {
 			//Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			//establish the connection
-			con=DriverManager.getConnection("jdbc:mysql:///NTAJ414DB","root","root");
+			con=DriverManager.getConnection("jdbc:mysql:///myadvjava","root","system");
 			//create Statement object
 			if(con!=null)
 			    ps=con.prepareStatement(INSERT_STUD_QUERY);
