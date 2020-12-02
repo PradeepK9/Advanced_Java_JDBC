@@ -8,21 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-/*CREATE TABLE "SYSTEM"."ARTIST_INFO" 
-(	"ARTISID" NUMBER(10,0) NOT NULL ENABLE, 
-	"ARTISTNAME" VARCHAR2(20 BYTE), 
-	"ARTISTADDRS" VARCHAR2(20 BYTE), 
-	"INCOME" FLOAT(126), 
-	"PHOTO" BLOB, 
-	"VIDEO" BLOB, 
-	 CONSTRAINT "ARTIST_INFO_PK" PRIMARY KEY ("ARTISID")) ;
-	 
-	 CREATE SEQUENCE  "SYSTEM"."ARTIST_ID_SEQ"  MINVALUE 1 MAXVALUE 1000000 INCREMENT BY 1 START WITH 1;
-	  */
-
 
 public class PSBLOBInsertOracleTest {
-  private static final String ARTIST_INSERT_QUERY="INSERT INTO ARTIST_INFO VALUES(ARTIST_ID_SEQ.NEXTVAL,?,?,?,?,?)";
+  private static final String ARTIST_INSERT_QUERY="INSERT INTO ARTIST_INFO VALUES(ARTIST_SEQ.NEXTVAL,?,?,?,?,?)";
 	public static void main(String[] args) {
 		Scanner sc=null;
 		String  name=null,addrs=null,photoLocation=null, videoLocation=null;
