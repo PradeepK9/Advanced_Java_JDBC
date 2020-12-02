@@ -8,10 +8,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-/*CREATE TABLE `ntaj414db`.`artist_info` (
-  `artistId` INT NOT NULL AUTO_INCREMENT,
-  `artistname` VARCHAR(20) NULL,
-  `artistaddrs` VARCHAR(20) NULL,
+/*CREATE TABLE `myadvjava`.`artist_info` (
+  `artno` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(20) NULL,
+  `addrs` VARCHAR(20) NULL,
   `income` FLOAT NULL,
   `photo` BLOB NULL,
   `video` BLOB NULL,
@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 
 public class PSBLOBInsertMySQLTest {
-  private static final String ARTIST_INSERT_QUERY="INSERT INTO ARTIST_INFO(ARTISTNAME,ARTISTADDRS,INCOME,PHOTO,VIDEO) VALUES(?,?,?,?,?)";
+  private static final String ARTIST_INSERT_QUERY="INSERT INTO ARTIST_INFO(NAME,ADDRS,INCOME,PHOTO,VIDEO) VALUES(?,?,?,?,?)";
 	public static void main(String[] args) {
 		Scanner sc=null;
 		String  name=null,addrs=null,photoLocation=null, videoLocation=null;
@@ -48,7 +48,7 @@ public class PSBLOBInsertMySQLTest {
 			 photoIS=new FileInputStream(photoLocation);
 			 videoIS=new FileInputStream(videoLocation);
 			 //establish the connection
-			 con=DriverManager.getConnection("jdbc:mysql:///ntaj414db","root","root");
+			 con=DriverManager.getConnection("jdbc:mysql:///myadvjava","root","system");
 			
 			 //create PreparedStatement obj
 			 if(con!=null)
